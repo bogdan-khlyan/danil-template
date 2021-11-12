@@ -9,11 +9,16 @@
   }
 
   > .container {
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width: 650px) {
-      padding-left: 10px;
-      padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media screen and (max-width: 980px) {
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
     }
     @media screen and (max-width: 550px) {
       justify-content: center;
@@ -23,28 +28,16 @@
 }
 
 .card {
-  margin: 8px;
-
-  width: calc(1150px / 3);
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
 
   border-radius: 15px;
   background-color: #FFFFFF;
 
-  opacity: 1;
-  transition: 200ms opacity;
-
-  @media screen and (max-width: 1250px) {
-    width: calc((100vw - (30px * 3)) / 3);
-  }
-  @media screen and (max-width: 768px) {
-    width: calc((100vw - 80px) / 2);
-  }
-  @media screen and (max-width: 650px) {
-    width: calc((100vw - 60px) / 2);
-  }
-  @media screen and (max-width: 550px) {
-    width: 100%;
-    max-width: 400px;
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   &__image {
