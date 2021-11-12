@@ -95,12 +95,12 @@ function createCard(card) {
             '</div>'
 }
 
+/**
+ * @param {number} cardId
+ */
 function deleteCard(cardId) {
     cards.splice(cards.findIndex(item => item.id === cardId), 1)
     const cardEl = document.getElementById(`card-${cardId}`)
-    // cardEl.opacity = 0
     cardEl.style.opacity = '0'
-    setTimeout(() => cardEl.remove(), 200)
-    // init()
-    // renderCards()
+    setTimeout(() => cardEl.remove(), 200) // задержка 200ms, ожидание завершения css transition 200ms
 }
