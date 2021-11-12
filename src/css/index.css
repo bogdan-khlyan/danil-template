@@ -246,6 +246,7 @@ select {
 .list > .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 @media screen and (max-width: 980px) {
   .list > .container {
@@ -265,8 +266,6 @@ select {
 
 .card {
   width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
   border-radius: 15px;
   background-color: #FFFFFF;
 }
