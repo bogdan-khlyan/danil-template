@@ -1,0 +1,9 @@
+{
+  "name": "danil-domashka",
+  "author": "danilemail@gmail.com",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}

@@ -1,0 +1,15 @@
+@import "base/clear";
+@import "base/fonts";
+
+@import "sections/header";
+@import "sections/title";
+@import "sections/list";
+
+@import "sections/footer";
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
