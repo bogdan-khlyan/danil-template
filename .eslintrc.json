@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 13
+    },
+    "rules": {
+        "semi": ["error", "never"],                 //var name = "ESLint"; - ERROR, var name = "ESLint" - ОК
+
+        "quote-props": ["error", "always"],         //требует заключения в кавычки всех имен свойств литералов объекта var object1 = {
+                                                    //"foo": "bar",
+                                                    //"baz": 42,
+                                                    //"qux-lorem": true
+
+        "space-in-parens": ["error", "never"],      //foo('bar');-ok, //foo('bar' ),foo( 'bar' ) - error;
+
+        "func-names": ["error", "always"],           //Foo.prototype.bar = function() {}; - ERROR, Foo.prototype.bar = function bar() {}; - OK, всегда требует имя функции
+
+        "no-multiple-empty-lines": ["error", { "max": 1}], //максимальное кол-во пробелов между строк
+
+        "no-trailing-spaces": "error"                      //запрещает завершающие пробелы (пробелы, табуляции и другие символы пробелов Unicode) в конце строк.
+    }
+  }

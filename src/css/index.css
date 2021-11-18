@@ -243,71 +243,57 @@ select {
     padding-bottom: 20px;
   }
 }
-.list > .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-@media screen and (max-width: 980px) {
-  .list > .container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 600px) {
-  .list > .container {
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 550px) {
-  .list > .container {
-    justify-content: center;
-  }
-}
 
-.card {
+.info-card {
   width: 100%;
-  border-radius: 15px;
-  background-color: #FFFFFF;
+  padding: 10px !important;
+  border-radius: 15px !important;
+  background-color: transparent;
 }
 @media screen and (max-width: 600px) {
-  .card {
+  .info-card {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
-.card__image {
+.info-card__wrapper {
+  background: #FFFFFF;
+  border-radius: 15px;
+  height: 100%;
+}
+.info-card__image {
   position: relative;
   width: 100%;
   height: 272px;
 }
 @media screen and (max-width: 1250px) {
-  .card__image {
+  .info-card__image {
     height: 220px;
   }
 }
 @media screen and (max-width: 1100px) {
-  .card__image {
+  .info-card__image {
     height: 180px;
   }
 }
 @media screen and (max-width: 650px) {
-  .card__image {
+  .info-card__image {
     height: 140px;
   }
 }
 @media screen and (max-width: 550px) {
-  .card__image {
+  .info-card__image {
     height: 180px;
   }
 }
-.card__image > img {
+.info-card__image > img {
   width: 100%;
   height: inherit;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.card__header {
+.info-card__header {
   position: absolute;
   top: 24px;
   left: 0;
@@ -316,7 +302,7 @@ select {
   padding-right: 24px;
   width: inherit;
 }
-.card__header--label {
+.info-card__header--label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,7 +312,7 @@ select {
   border-radius: 10px;
   background-color: #FFFFFF;
 }
-.card__header--label > span {
+.info-card__header--label > span {
   padding-left: 20px;
   padding-right: 20px;
   font-family: Roboto, sans-serif;
@@ -337,10 +323,10 @@ select {
   text-align: center;
   color: #000000;
 }
-.card__header--btn-delete {
+.info-card__header--btn-delete {
   margin-left: auto;
 }
-.card__header--btn-delete > button {
+.info-card__header--btn-delete > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,22 +336,22 @@ select {
   border-radius: 2px;
   cursor: pointer;
 }
-.card__header--btn-delete > button svg path {
+.info-card__header--btn-delete > button svg path {
   transition: 200ms;
 }
-.card__header--btn-delete > button:hover svg path {
+.info-card__header--btn-delete > button:hover svg path {
   fill: #000000;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.card__content {
+.info-card__content {
   padding: 20px 24px 24px;
 }
 @media screen and (max-width: 980px) {
-  .card__content {
+  .info-card__content {
     padding: 16px;
   }
 }
-.card__content--date > span {
+.info-card__content--date > span {
   font-family: Source Sans Pro, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -376,21 +362,21 @@ select {
   color: #B6BCBF;
 }
 @media screen and (max-width: 1100px) {
-  .card__content--date > span {
+  .info-card__content--date > span {
     font-size: 14px;
     line-height: 18px;
   }
 }
-.card__content--title {
+.info-card__content--title {
   margin-top: 12px;
   margin-bottom: 16px;
 }
 @media screen and (max-width: 1250px) {
-  .card__content--title {
+  .info-card__content--title {
     margin-bottom: 10px;
   }
 }
-.card__content--title > span {
+.info-card__content--title > span {
   font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -399,30 +385,30 @@ select {
   color: #1A1B22;
 }
 @media screen and (max-width: 1250px) {
-  .card__content--title > span {
+  .info-card__content--title > span {
     font-size: 22px;
     line-height: 26px;
   }
 }
 @media screen and (max-width: 1100px) {
-  .card__content--title > span {
+  .info-card__content--title > span {
     font-size: 20px;
     line-height: 24px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .card__content--title > span {
+  .info-card__content--title > span {
     font-size: 18px;
     line-height: 20px;
   }
 }
 @media screen and (max-width: 650px) {
-  .card__content--title > span {
+  .info-card__content--title > span {
     font-size: 16px;
     line-height: 18px;
   }
 }
-.card__content--description {
+.info-card__content--description {
   height: 120px;
   overflow: hidden;
   display: -webkit-box;
@@ -430,12 +416,12 @@ select {
   -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 1000px) {
-  .card__content--description {
+  .info-card__content--description {
     height: 100px;
     -webkit-line-clamp: 4;
   }
 }
-.card__content--description > span {
+.info-card__content--description > span {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -444,15 +430,15 @@ select {
   color: #1A1B22;
 }
 @media screen and (max-width: 1000px) {
-  .card__content--description > span {
+  .info-card__content--description > span {
     font-size: 12px;
     line-height: 14px;
   }
 }
-.card__content--category {
+.info-card__content--category {
   margin-top: 9px;
 }
-.card__content--category > span {
+.info-card__content--category > span {
   font-family: Roboto Slab, sans-serif;
   font-style: normal;
   font-weight: bold;

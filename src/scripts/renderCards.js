@@ -64,38 +64,40 @@ function renderCards() {
  * @returns {string}
  */
 function createCard(card) {
-    return `<div id="card-${card.id}" class="card">` +
-                '<div class="card__image">' +
-                    `<img src="${card.image}" alt="">` +
-                    '<div class="card__header">' +
-                        '<div class="card__header--label">' +
-                            `<span>${card.label}</span>` +
+    return `<div id="card-${card.id}" class="info-card col-xl-4 col-md-6 col-sm-6">` +
+        '<div class="info-card__wrapper">' +
+            '<div class="info-card__image">' +
+                        `<img src="${card.image}" alt="">` +
+                        '<div class="info-card__header">' +
+                            '<div class="info-card__header--label">' +
+                                `<span>${card.label}</span>` +
+                            '</div>' +
+                            `<div class="info-card__header--btn-delete" onclick="deleteCard(${card.id})">` +
+                                '<button>' +
+                                    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/></svg>' +
+                                '</button>' +
+                            '</div>' +
                         '</div>' +
-                        `<div class="card__header--btn-delete" onclick="deleteCard(${card.id})">` +
-                            '<button>' +
-                                '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/></svg>' +
-                            '</button>' +
+                    '</div>' +
+                    '<div class="info-card__content">' +
+                        '<div class="info-card__content--date">' +
+                            `<span>${card.date}</span>` +
                         '</div>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="card__content">' +
-                    '<div class="card__content--date">' +
-                        `<span>${card.date}</span>` +
-                    '</div>' +
-                    '<div class="card__content--title">' +
-                        `<span>${card.title}</span>` +
-                    '</div>' +
-                    '<div class="card__content--description">' +
-                        `<span>${card.description}</span>` +
-                    '</div>' +
-                    '<div class="card__content--category">' +
-                        `<span>${card.category}</span>` +
+                        '<div class="info-card__content--title">' +
+                            `<span>${card.title}</span>` +
+                        '</div>' +
+                        '<div class="info-card__content--description">' +
+                            `<span>${card.description}</span>` +
+                        '</div>' +
+                        '<div class="info-card__content--category">' +
+                            `<span>${card.category}</span>` +
+                        '</div>' +
                     '</div>' +
                 '</div>' +
             '</div>'
 }
 
-function deleteCard(cardId) {
+function deleteCard( cardId ) {
     cards.splice(cards.findIndex(item => item.id === cardId), 1)
     const cardEl = document.getElementById(`card-${cardId}`)
     // cardEl.opacity = 0
