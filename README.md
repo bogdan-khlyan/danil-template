@@ -12,3 +12,13 @@ Arguments:
 Output paths to refresh:
 
     ../css/index.css:../css/index.css.map
+
+Added a watcher index.min.css.
+-
+Install:
+
+    npm install -g csso-cli:
+
+Settings:
+
+    File -> Setting -> File Watcher -> add CSSO CSS Optimizer    
