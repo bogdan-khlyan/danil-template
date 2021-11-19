@@ -22,3 +22,17 @@ Install:
 Settings:
 
     File -> Setting -> File Watcher -> add CSSO CSS Optimizer    
+
+
+npx eslint .\src\scripts\renderCards.js
+
+Getting Started with ESLint.
+-
+Install:
+
+    npm install eslint --save-dev
+    npx eslint --init
+Start:
+    
+     npx eslint path to file.js
+
