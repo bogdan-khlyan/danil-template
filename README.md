@@ -31,8 +31,8 @@ Getting Started with ESLint.
 Install:
 
     npm install eslint --save-dev
-    npx eslint --init
+
 Start:
     
-     npx eslint path to file.js
+     npx eslint [path to file.js]
 
